@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/mg1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_view_home"
+            android:icon="@drawable/ic_home"
+            android:title="home"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/nav_view_dashboard"
+            android:icon="@drawable/ic_dashbord"
+            android:title="dashbord"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/nav_view_message"
+            android:icon="@drawable/ic_message"
+            android:title="message"
+            app:showAsAction="ifRoom" />
+    </group>
+
+</menu>

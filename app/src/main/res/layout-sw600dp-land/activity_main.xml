@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray4"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayot"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/whiteBG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line1"
+        app:navigationIcon="@drawable/ic_menu"
+        app:titleTextColor="@color/dynamicAndTitleTextColor" />
+
+    <View
+        android:id="@+id/view_line3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gray45"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/view_line1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_edit_box"
+        android:hint="this is search text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/dynamicAndTitleTextColor"
+        android:textColorHint="@color/gray41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nav_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="you can change color by press text button "
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nav_view"
+        app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_colors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/rl_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_line1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+    <!--<fragment
+        android:id="@+id/my_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:navGraph="@navigation/mobile_navigation" />-->
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gray45"
+        app:layout_constraintStart_toEndOf="@+id/nav_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_add"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="new patient"
+        app:backgroundTint="@color/purple"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/ic_add_person"
+        app:layout_constraintStart_toStartOf="@+id/nav_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray4"
+        android:fitsSystemWindows="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:theme="@style/NavigationStyle"
+        app:itemBackground="@drawable/nav_view_selector"
+        app:itemIconTint="@color/staticTextColor"
+        app:itemTextColor="@color/dynamicAndTitleTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mb_add"
+        app:menu="@menu/nav_view" />
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gray45"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom"
+        app:layout_constraintStart_toEndOf="@+id/view_line1" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/gray2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_line1">
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
